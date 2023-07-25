@@ -1,4 +1,4 @@
-name: Main Kittigram workflow
+name: Main Kittygram workflow
 
 on:
   push:
@@ -61,7 +61,7 @@ jobs:
         with:
           context: ./backend/
           push: true
-          tags: imretot/kittigram_backend:latest
+          tags: imretot/kittygram_backend:latest
 
   frontend_tests:
     runs-on: ubuntu-latest
@@ -101,7 +101,7 @@ jobs:
         with:
           context: ./frontend/
           push: true
-          tags: imretot/kittigram_frontend:latest
+          tags: imretot/kittygram_frontend:latest
 
   build_gateway_and_push_to_docker_hub:
     name: Push gateway Docker image to DockerHub
@@ -121,4 +121,4 @@ jobs:
         with:
           context: ./nginx/
           push: true
-          tags: imretot/kittigram_gateway:latest
+          tags: imretot/kittygram_gateway:latest
