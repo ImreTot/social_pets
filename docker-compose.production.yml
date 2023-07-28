@@ -11,12 +11,14 @@ services:
     env_file: .env
     volumes:
       - pg_data_production:/var/lib/postgresql/data
+
   backend:
     image: imretot/kittygram_backend
     env_file: .env
     volumes:
       - static:/backend_static
       - media:/media
+      -
   frontend:
     image: imretot/kittygram_frontend
     env_file: .env
