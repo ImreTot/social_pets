@@ -18,7 +18,7 @@ services:
     volumes:
       - static:/backend_static
       - media:/media
-      -
+
   frontend:
     image: imretot/kittygram_frontend
     env_file: .env
