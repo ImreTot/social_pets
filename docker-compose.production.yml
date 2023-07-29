@@ -25,6 +25,7 @@ services:
     command: cp -r /app/build/. /frontend_static/
     volumes:
       - static:/frontend_static
+
   gateway:
     image: imretot/kittygram_gateway
     env_file: .env
@@ -32,4 +33,4 @@ services:
       - 9000:80
     volumes:
       - static:/static
-      - media:/media
+      - media:/media:ro
